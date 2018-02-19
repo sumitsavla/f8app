@@ -18,6 +18,8 @@ services:
       - mongo
   parse_dashboard:
     build: ./server/parse-dashboard
+    environment:
+      - PARSE_DASHBOARD_ALLOW_INSECURE_HTTP=1
     ports:
       - "4040:4040"
   graphql:
