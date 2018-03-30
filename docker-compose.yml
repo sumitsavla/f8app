@@ -6,10 +6,6 @@ services:
       default:
         aliases:
           - mongo
-  mongorestore:
-    build: ./server/mongorestore
-    depends_on:
-      - mongo
   parse:
     build: ./server/parse-server
     ports:
